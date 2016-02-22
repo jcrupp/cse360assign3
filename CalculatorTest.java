@@ -94,7 +94,6 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		
 		calc.add(2);
-		
 		calc.multiply(2);
 		
 		assertEquals(4, calc.getTotal());
@@ -105,7 +104,6 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		
 		calc.add(2);
-		
 		calc.multiply(0);
 		
 		assertEquals(0, calc.getTotal());
@@ -116,7 +114,6 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		
 		calc.add(2);
-		
 		calc.multiply(-2);
 		
 		assertEquals(-4, calc.getTotal());
@@ -128,7 +125,6 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		
 		calc.add(2);
-		
 		calc.divide(-2);
 		
 		assertEquals(-1, calc.getTotal());
@@ -139,7 +135,6 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		
 		calc.add(2);
-		
 		calc.divide(0);
 		
 		assertEquals(0, calc.getTotal());
@@ -150,7 +145,6 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		
 		calc.add(2);
-		
 		calc.divide(2);
 		
 		assertEquals(1, calc.getTotal());
@@ -159,7 +153,15 @@ public class CalculatorTest {
 
 	@Test
 	public void testGetHistory() {
-		fail("Not yet implemented");
+		Calculator calc = new Calculator();
+		
+		calc.add (4);
+		calc.subtract (2);
+		calc.multiply (2);
+		calc.divide (2);
+		calc.add(5);
+		
+		assertEquals("0 + 4 - 2 * 2 / 2 + 5", calc.getHistory());
 	}
 
 }
